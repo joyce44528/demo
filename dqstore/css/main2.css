@@ -1,0 +1,587 @@
+*{
+	padding: 0;
+	margin: 0;
+	
+
+}
+/*第一導覽列*/
+
+.container{
+	margin: 3rem auto;
+	height: 100%;
+	width: 100%;
+
+
+}
+.nav1{
+	background-color: #000;
+	padding:3px;
+	height: 3.5rem;
+}
+
+.nav1 b{
+	font-weight: 900;
+}
+
+.nav1 .navbar-brand{
+	font-weight: lighter;
+	position: relative;
+	color: #fff;
+	font-size: 30px;
+	letter-spacing: 0px;
+	line-height: 0;
+	font-family: Microsoft JhengHei;
+	display: flex;
+	
+}
+
+.nav1 .navbar-collapse{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	font-style: 14px;
+}
+
+.nav1 .btn2{
+	font-size: 15px;
+	border-radius: 10px;
+	font-family: Microsoft JhengHei;
+	color: #fff;
+	background-color: #000;
+	padding: 5px 20px;
+
+	
+}
+.nav1 .btn2 p{
+	display: inline;
+	padding-left: 10px;
+}
+
+
+/*第二導覽列*/
+.nav3{
+	width: 100%;
+	background-color: rgba(255,255,255,.6);
+	padding:3px;
+	height: 3.5rem;
+
+}
+
+
+.nav3 .box{
+	width: 58%;
+	margin: auto;
+	background-color: transparent;
+
+
+}
+.nav3 .navbar-text{
+	color: #6e6f72;
+	padding: 15px 0;
+	margin-right: 10px;
+	
+}
+
+.nav3 .navbar-text2{
+	color: #a9a9a9;
+	border-radius: 5px;
+	border: 1px solid #a8a8a8;
+	margin-right: 10px;
+	padding: 2px 5px;
+	
+}
+
+.nav3 .navbar-text3{
+	color: #000;
+	font-size: 20px;
+}
+
+
+
+
+
+
+.nav3 .btn2{
+	padding: 10px 40px;
+	float: right;
+	font-size: 15px;
+	color: #262729;
+	border-radius: 100px;
+	font-family: Microsoft JhengHei;
+	background-color: transparent;
+	border: 1px solid #262729;
+	margin-top: 3px;
+
+
+	
+}
+
+
+
+
+/*內文*/
+section{
+	
+}
+
+.article{
+	position: relative;
+	width: 100vw
+	-webkit-background-size: cover;
+	background-size: cover;
+ 	background-position: 100% 100%; 
+ 	height: calc(100vh - 100px); 
+ 	display: block;
+}
+
+.article1{
+	width: 100vw;
+	height: 120px;
+}
+
+#article1{
+	background-image: url('../images/nile1.jpg');
+	position: relative;
+}
+
+
+#article1 .down-btn{
+	height: 60px;
+	width: 30px;
+	background-color: rgba(255,255,255,.7);
+	position: absolute;
+	bottom: 70px;
+	left: 935px;
+	border-radius: 100px;
+	border: 1px solid #000;
+
+
+}
+#article1 .down-btn a{
+	height: 100%;
+	width: 100%;
+	line-height: 70px;
+	padding: 0 5px;
+	
+
+}
+
+#article1 .down-btn .fa{
+	font-size: 30px;
+	color: #000;
+	transition: .2s;
+	
+
+}
+
+
+#article1 .down-btn:hover .fa{
+	transform: translateY(15%);
+}
+
+#article2{
+	background-image: url('../images/cover.jpg');
+	height: calc(100vh - 100px);
+
+}
+
+#article2 .btn2{
+	padding: 10px 40px;
+	position: center;
+	font-size: 20px;
+	color: #262729;
+	letter-spacing: 2px; 
+	border-radius: 100px;
+	font-family: Microsoft JhengHei;
+	background-color: transparent;
+	border: 1px solid #262729;
+
+}
+
+
+
+#article2 .navbar-text{
+	color: #fff;
+	border: 1px solid #a8a8a8;
+	border-radius: 5px;
+	font-size: 2px;
+	line-height: 7px;
+	padding: 7px 7px;
+
+	
+}
+
+#article2 .navbar-text1{
+	font-size: 2px;
+	color: #fff;
+	border: 1px solid #a8a8a8;
+	border-radius: 5px;
+	padding: 5px 7px;
+	margin-right: 10px;
+	
+}
+
+#article2 .navbar-text2{
+	font-size: 4px;
+}
+
+#article3{
+	height: 10rem;
+	background-color: #fff;
+	padding: 2em;
+	text-align: left;
+
+}
+#article4{
+	background-image: url('../images/nile2.jpg');
+}
+
+#article5{
+	
+	height: 22rem;
+	background-color: #fff;
+}
+#article6{
+	background-image: url('../images/nile3.jpg');
+}
+#article7{
+	height: 25rem;
+	background-color: #fff;
+}
+
+#article8{
+	background-image: url('../images/nile4.jpg');
+}
+#article9{
+	background-image: url('../images/nile5.jpg');
+}
+#article10{
+	background-image: url('../images/nile6.jpg');
+}
+#article11{
+	background-image: url('../images/nile7.jpg');
+}
+#article12{
+	background-image: url('../images/nile8.jpg');
+}
+#article13{
+	height: calc(100vh + 300px) ;
+	background-image: url('../images/nile9.jpg');
+}
+#article14{
+	height: 25rem;
+	background-color: #fff;
+}
+#article15{
+	height: calc(100vh + 300px) ;
+	background-image: url('../images/nile10.jpg');
+}
+#article16{
+	height: 10rem;
+	background-color: #fff;
+}
+#article17{
+	height: calc(100vh + 300px) ;
+	background-image: url('../images/nile11.jpg');
+}
+#article18{
+	height: calc(100vh + 300px) ;
+	background-color: #fff;
+}
+#article19{
+	height: calc(100vh - 100px);
+	background-image: url('../images/cover.jpg');
+}
+
+#article20{
+	height: 120px;
+	display: flex;
+
+	
+}
+
+
+article .block{
+/*outline: 1px solid #a2b5a4; */
+  width: calc(100% / 3);
+  height: 120px;
+  letter-spacing: 2.5px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  /*line-height: 100px;*/
+  
+}
+
+.b1{
+	background: url('../images/200s.jpg') center center;
+	transition: .2s;
+
+}
+
+
+.b2{
+	background: url('../images/300s.jpg') center center;
+  
+}
+.b3{
+	background: url('../images/400s.jpg') center center;
+  
+}
+
+.b1 a{
+	position: relative;
+	margin-top: 30px;
+}
+.b1 a::after{
+	display: block;
+	content: '';
+	height: 1px;
+	width: 0;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 240px;
+	transition: .2s;
+}
+
+.b2 a{
+	position: relative;
+	margin-top: 30px;
+}
+.b2 a::after{
+	display: block;
+	content: '';
+	height: 1px;
+	width: 0;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 250px;
+	transition: .2s;
+}
+
+.b3 a{
+	position: relative;
+	margin-top: 30px;
+}
+.b3 a::after{
+	display: block;
+	content: '';
+	height: 1px;
+	width: 0;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 270px;
+	transition: .2s;
+}
+
+.b1:hover{
+	background: url('../images/200s.jpg') center center / cover;
+ 	
+ 	
+}
+
+.b2:hover{
+	background: url('../images/300s.jpg') center center / cover;
+}
+
+.b3:hover{
+	background: url('../images/400s.jpg') center center / cover;
+}
+
+.b1:hover a::after, .b2:hover a::after, .b3:hover a::after{
+	width: 200px;
+}
+
+
+
+
+.article-title{
+	font-family: PMingLiU;
+	position: center;
+	padding-top: 80px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 40px;
+	color: #fff;
+	opacity: 1;
+	transition: all 1s;
+	transition-delay: 1s;
+
+}
+.article-title1{
+	margin: auto;
+	padding: 2em;
+    text-align: left;
+    border-left: 4px solid gray;
+  	max-width: 700px; 
+}
+.article-title2{
+	text-align: left;
+	max-width: 750px; 
+	margin: auto;
+	padding: 2em;
+	padding-top: 3em;
+   letter-spacing: .2em;
+   line-height: 3em;
+   font-size: 15px;
+    
+}
+
+.article-title3{
+	text-align: left;
+	max-width: 750px; 
+	margin: auto;
+	padding: 2em;
+	padding-top: 3em;
+   letter-spacing: .2em;
+   line-height: 3em;
+   font-size: 15px;
+    
+}
+
+.article-title4{
+	margin: auto;
+	max-width: 750px;
+	position: center;
+	padding: 2em;
+	text-align: left;
+	padding-top: 4em;
+   letter-spacing: .2em;
+   line-height: 3em;
+   font-size: 15px; 
+}
+
+.article-title5{
+	margin: auto;
+	max-width: 750px;
+	position: center;
+	padding: 2em;
+	text-align: left;
+	padding-top: 4em;
+   letter-spacing: .2em;
+   line-height: 3em;
+   font-size: 15px; 
+}
+
+.article-title6{
+	margin: auto;
+	max-width: 750px;
+	padding: 2em;
+	line-height: 30px;
+	letter-spacing: .2em;
+}
+
+
+/*footer*/
+footer .nav2{
+	display: block;
+	background-color: #000;
+	height: 19rem;
+	font-family: Microsoft JhengHei;
+	font-size: 13px;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,0.3);
+
+}
+.nav-text{
+	color: #1A9FD1;
+
+}
+.nav-text:hover{
+	color: #3179ed;
+}
+.nav2 .navbar-text{
+	font-family: PMingLiU;
+	color: #fff;
+	font-size: 14px;
+
+}
+
+.nav2 .navbar-text2{
+	font-family: PMingLiU;
+	
+	text-align: left;
+	max-width: 750px;
+	padding-top: 100px;
+	margin: auto;
+	line-height: 30px;
+	
+	font-size: 15px;
+
+}
+
+.nav2 .navbar-text3{
+	display: inline;
+  color: #fff;
+  float: right;
+  max-width: 750px;
+ 	font-size: 5px;	
+  max-width: 750px;
+}
+
+nav div a{
+	color: #fff;
+}
+
+nav div a:hover{
+	text-decoration: none;
+	color: rgba(255,255,255,0.7);
+}
+
+nav span a{
+	color: rgba(255,255,255,0.3);
+}
+
+nav span a:hover{
+	text-decoration: none;
+	color: rgba(255,255,255,0.7);
+}
+
+nav ul li a {
+	color: rgba(255,255,255,0.3);
+}
+
+nav ul li a:hover{
+	color: rgba(255,255,255,0.7);
+	
+}
+
+.nav1 .fa-shopping-bag{
+	font-size: 20px;
+}
+
+.nav2 .fa-facebook{
+	font-size: 25px;
+	color: #fff;
+	
+}
+.nav2 .fa-facebook:hover{
+	color: #3b5998;
+	
+}
+
+.nav2 .fa-google-plus{
+	font-size: 25px;
+	color: #fff;
+	
+}
+
+.nav2 .fa-google-plus:hover{
+	color: #EA4335;
+	
+}
+
+.nav2 .fa-paper-plane-o{
+	font-size: 25px;
+	color: #fff;
+	
+}
+
+.nav2 .fa-paper-plane-o:hover{
+	color: #1A9FD1;
+	
+}
+
