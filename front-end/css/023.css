@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Xanh+Mono&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	cursor: default;	
+}
+/*導覽列*/
+.side-menu{
+	width: 100%;
+	/*height: 100%;*/
+	background: linear-gradient(0deg,rgba(0,0,0,.9),rgba(0, 0, 0,1));
+	display: flex;
+	flex-direction: column;	
+	box-shadow: 5px 0 10px hsla(240, 40% , 15% , .6);
+	position: relative;
+	transform: translateY(-20%);
+	transition: .5s;
+
+
+}
+.side-menu form{
+	margin: 20px auto;
+	/*左右置中，垂直m10*/
+	display: flex;
+	border-radius: 100px;
+	border: 1px solid #fff;
+
+
+}
+
+.side-menu form input,
+.side-menu form button{
+	width: 240px;
+	padding: 8px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
+.side-menu form input{
+	width: 240px;
+}
+.side-menu form button{
+	width: 40px;
+	color: #bd9e4b;
+	
+}
+.side-menu label{
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background-color: transparent;
+	color: #fff;
+	right: 0;
+	left: 0;
+	/*top: 0;*/
+	bottom: -30px;
+	margin: auto;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 0 0 10px 10px;
+	font-size: 30px;
+	
+
+}
+#side-menu-switch{
+	position: absolute;
+	opacity: 0;
+}
+
+#side-menu-switch:checked + .side-menu{
+	transform: translateY(0);
+
+
+}
+#side-menu-switch:checked + .side-menu nav a{
+	display: block;
+}
+
+#side-menu-switch:checked + .side-menu label .fa{
+	transform: scaleY(-1);
+	
+}
+
+
+nav a{
+	display: none;
+	padding: 12px;
+	color: rgba(255,255,255,.9);
+	font-size: 20px;
+	text-decoration: none;
+	position: relative;
+
+}
+
+
+nav a + a::before{
+	content: '';
+	position: absolute;
+	border-top: 1px dotted rgba(255,255,255,.5);
+	left: 10px;
+	right: 10px;
+	top: 0;
+	transition: .3s;
+
+}
+nav a .fa{
+	padding: 0 5px;
+	/*transform是做放大縮小*/
+	transform: scale(0);
+	/*opacity: 0;*/
+	margin-left: -1.1em;
+	transition: .3s;
+
+}
+nav a:hover .fa{
+	margin-left: 0em;
+	transform: scale(1);
+	/*opacity做的是淡入淡出*/
+	/*opacity: 1;*/
+}
+
+nav a:hover  + a::before{
+	border-top: 1px solid rgba(255,255,255,.5);
+}
+
+
+
+/*頁首圖片*/
+.banner{
+	width: 100%;
+	height: 100vh;
+	margin: -15px auto;
+	/*100%的高度是看內容物撐開的大小*/
+	/*vh是視窗大小*/
+	background: linear-gradient(0deg,rgba(50, 68, 84,.5),rgba(122, 109, 91,.7)) center center / 100% 100%,			
+				url("../images/pexels-photo-373888.jpeg") right center / 100% 100%;
+	/*做漸層*/
+
+}
+.container{
+	width: 100%;
+	max-width: 1200px;
+	/*做類似RWD的效果*/
+	height: 100%;
+	margin: auto;
+	/*為了置中*/
+	font-family: 'Noto Sans TC', sans-serif;
+	/*微軟正黑體*/
+	display: flex;
+}
+.banner-text{
+	height: 50%;
+	/*為了flex要設高度*/
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	/*主軸對齊中間*/
+	flex-direction: column;
+	/*設定主軸直向*/
+	align-items: center;
+	margin: auto ;
+	border: 2.5px solid #bd9e4b;
+	color: #bd9e4b;
+	transition: .3s;
+	
+	/*box-shadow: -100px -50px 0 0px #bd9e4b;*/
+	/*backdrop-filter: blur(3px);*/
+
+}
+.banner-text h1{
+	font-size: 2.5em;
+	/*border-bottom: 1px solid #fff;*/
+	/*底線*/
+	font-weight: 700;
+	transition: .5s;
+	line-height: 1.2;
+	
+
+
+}
+.banner-text p{
+	font-size: .5em;
+	padding: 20px;
+	transition: .5s;
+	
+
+
+}
+.banner:hover .banner-text{
+	/*backdrop-filter: blur(5px);*/
+	transform: translateY(25px);
+}
+
+.banner:hover p{
+	font-size: 1em;
+	
+}
+
+
+/*圖文介紹頁*/
+.menu{
+	width: 100%;
+	padding: 200px 0 100px;
+	background: url("../images/pexels-photo-4073920.jpeg") 
+				fixed center center / 100% 100%;
+}
+
+.menu-bgi{
+	width: 95%;
+	/*margin: auto;*/
+	padding: 100px 0 300px;
+	background: url("../images/pexels-photo-5912576.jpeg") ;
+}
+
+.wrap{
+	/*對wrap來說，底下有4欄，
+	若設display: flex;在此，會呈現橫排的四欄狀況*/
+	width: 1300px;
+	margin: auto;
+
+}
+.item{
+	/*在item中有pic與text2欄，
+	所以用display:flex時會呈現2欄狀況*/
+	display: flex;
+	align-items: center;
+	margin-bottom: 70px;
+	/*background-color: rgb(238,238,238);*/
+	font-family: 'Noto Sans TC', sans-serif;
+
+
+}
+
+.item .pic{
+	width: 55%;
+	flex-shrink: 0;
+
+}
+.item .pic img{
+	width: 100%;
+	vertical-align: middle;
+
+}
+.item .text{
+	width: 55%;
+	background-color: rgb(255,238,238);
+	flex-shrink: 0;
+	padding: 50px 30px;
+	/*字卡中的間隔*/
+	box-sizing: border-box;
+	/*當你設定一個元素樣式為 box-sizing: border-box;，
+	這個元素的內距和邊框將不會增加元素本身的寬度。*/
+	position: relative;
+	z-index: 1;
+
+
+}
+
+.item .text-border{
+	width: 100%;
+	border: 1px solid transparent;
+	padding: 50px 30px;
+	transition: .3s .1s;
+
+}
+
+.item .text h2{
+	padding-bottom: 20px;
+	transition: .3s .2s;
+}
+
+
+.item:hover .text-border{
+	border: 1px solid #fff;
+}
+.item:hover .text h2{
+	color: rgba(255,255,255,.7);
+}
+
+
+
+.item > :first-child{
+	/*選item底下的第一個子代(排最前面的)*/
+	/*若寫成.item:first-child，
+	代表為選到第一個.item元素，而非底下的物件*/
+	margin-right: -10%;
+	/*此時會發現文字並非都在最上面，
+	因為原始碼(html)的下方物件會蓋在上面*/
+
+
+}
+/*:nth-child(a) 可以選擇任意第a位子代*/
+.item:nth-child(1) .text{
+	background-color: rgba(112, 61, 28,.8);
+	/*代表為.第一個item的text*/
+}
+.item:nth-child(2) .text{
+	background-color: rgba(149,171,182,.8);
+	/*代表為.第二個item的text*/
+}
+.item:nth-child(3) .text{
+	background-color: rgba(158, 163, 114,.8);
+	/*代表為.第三個item的text*/
+}
+.item:nth-child(4) .text{
+	background-color: rgba(133, 84, 72,.8);
+	/*代表為.第四個item的text*/
+}
+
+
+/*footer*/
+.main-footer{
+	width: 100%;
+	height: 40vh;
+	/*padding: 50px 0 0;*/
+	background-color: #3b3028;
+	font-family: 'Noto Serif TC', serif;
+	position: relative;
+}
+
+.main-footer .footer-logo{
+	display: flex;
+	width: 150px;	
+	/*justify-content: center;*/
+	margin: 0 auto 50px;
+	padding: 50px 5px;
+	border: 2px solid #bd9e4b;
+	border-top: transparent;;
+	border-radius: 0 0 10px 10px;
+	background-color: transparent;
+	box-shadow: 10px 0 0 #bd9e4b;
+	text-align: center;
+	background-color: #3d3026;
+
+
+}
+.main-footer .footer-logo a{
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 18px;
+	border-bottom: 1px solid #fff;
+	
+}
+
+.main-footer .footer-logo::after{
+	display: block;
+	content: '';
+	width: 10px;
+	height: 5px;
+	background-color: #bd9e4b;
+	position: absolute;
+	right: 300px;
+	top: 70px;
+	box-shadow: 80px 50px 0 #ad8566,
+				-80px 50px 0 #ad8566,
+				150px 0px 0 #fff,
+				-150px 0px 0 #fff;
+
+}
+
+.main-footer .footer-con{
+	width: 1000px;
+	display: flex;
+	/*justify-content: center;*/
+	padding: 50px 0 15px;
+	margin: 0 auto;
+	border-bottom: 1px dotted #aaa; 
+
+}
+.footer-con ul{
+	width: 43%;
+}
+.footer-con ul a{
+	padding: 5px 7px;
+	color: #bd9e4b;
+	margin-right: 10px;
+	border: 1px solid #bd9e4b;
+	border-radius: 50%;
+	font-size: 14px;
+	transition: .3s .2s;
+}
+
+.footer-con ul a:hover{
+	color: #eee;
+}
+
+.footer-con .tel{
+	width: 57%;
+	position: relative;
+	
+	
+}
+
+.footer-con .tel .fa{
+	color: #bd9e4b;
+	font-size: 40px;
+	margin-right: 10px;
+	position: absolute;
+	right: 70px;
+	bottom: 0;
+	transition: .3s .2s;
+}
+
+.footer-con .tel a{
+	text-decoration: none;
+	color: #fff;
+
+}
+.footer-con .tel a span{
+	display: block;
+
+}
+
+.footer-con .tel a:last-child{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	
+}
+
+.footer-con .tel a:hover .fa{
+	color: #eee;
+}
+
+.main-footer .copyright{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 70px;
+	color: #aaa;
+	font-size: 14px;
+	position: relative;
+
+}
+
+.main-footer .copyright::before{
+	display: block;
+	content: '';
+	width: 10px;
+	height: 5px;
+	background-color: #bd9e4b;
+	position: absolute;
+	left: 400px;
+	bottom: 70px;
+	box-shadow: 80px 50px 0 #ad8566,
+				-80px 50px 0 #ad8566,
+				-150px 0px 0 #fff,
+				-230px 50px 0 #ad8566;
+
+
+
+}

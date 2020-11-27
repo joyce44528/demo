@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Xanh+Mono&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/*導覽列*/
+
+#menu_control{
+	position: absolute;
+	opacity: 0;
+	/*將menu_control藏起來*/
+	/*z-index: 2;*/
+
+}
+#menu_control:checked ~ header nav{
+	left: 0;
+}
+.header{
+	height: 60px;
+	background: #eee;
+	position: relative;
+	/*想將漢堡選單圖設在其右側，為了讓它方便進行posa，所以在此設定定位*/
+}
+.logo{
+	width: 200px;
+	height: 50px;
+	margin: 0 30px;
+	box-sizing: border-box;
+	
+}
+
+
+.logo a{
+	width: 80%;
+	text-decoration: none;
+	color: #eee;
+	font-size: 18px;
+	font-family: 'Xanh Mono', monospace, 'Noto Sans TC', sans-serif;
+	line-height: 120px;
+	padding: 50px 20px;
+	/*border: 2px solid #bd9e4b;*/
+	background-color: transparent;
+	box-shadow: 0 8px 0 #bd9e4b;
+	text-align: center;
+	background-color: rgba(61,48,38,1);
+	transition: .3s;
+
+}
+
+.logo a:hover{
+	box-shadow: 0 8px 0 rgba(189,158,75,.8);
+}
+
+
+.menu_btn{
+	/*此特性為inline，所以要設定成block才可以設寬高*/
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: #eee;
+	border: 1px solid #bd9e4b;
+	border-radius:5px;
+	position: absolute;
+	/*想設在nav的右側，所以要在其父層 header設定位*/
+	top: 5px;
+	right: 10px;
+}
+.menu_btn span{
+	/*將選單兩字弄消失，讓他隱身在漢堡選單裡，像埋管線一樣*/
+	opacity: 0;
+	width: 1px;
+	height: 1px;
+	display: block;
+	overflow: hidden;
+	/*t超出去的範圍就會藏起來*/
+
+}
+.menu_btn::before{
+	/*製作漢堡選單用的僞類*/
+	content: '';
+	position: absolute;
+	/*定位在其父層 menu_btn*/
+	height: 2px;
+	width: 32px;
+	left: 4px;
+	/*設定置中用，一條為36px，框框為40px，所以40-36=4px
+	兩邊距離2px即置中*/
+	background-color: #bd9e4b;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	/*top: 0;
+	bottom: 0;
+	margin: auto;
+	為垂直置中的設定*/
+	box-shadow: 0 8px 0 #bd9e4b,
+				0 -8px 0 #bd9e4b;
+	/*在創造2個上下條，等於原先的2個影子*/
+
+}
+
+
+nav{
+	/*手機版導覽列*/
+	width: 80%;
+	height: calc(100vh - 60px);
+	/*將導覽列本身的寬度 50px減掉*/
+	background-color: #edebe6;
+	position: absolute;
+	/*以header為主定位*/
+	top: 50px;
+	left: -80%;
+	/*在未點擊漢堡選單時不出現*/
+	transition: .5s;
+	z-index: 2;
+	
+	
+}
+
+nav a{
+	display: block;
+	/*讓他垂直排列(a原本為inline特性)*/
+	color: #bd9e4b;
+	padding: 20px 30px;
+	text-decoration: none;
+	border-bottom: 1px dotted #bd9e4b;
+	/*為每個選項下方的超連結*/
+	transition: .6s;
+}
+
+nav a:hover{
+	color: #917d41;
+	background-color: #e8e4d8;
+
+}
+
+
+#menu_control:checked ~ .header nav{
+	left: 0;
+/*設定當menu_control被打勾時，
+使得header內的nav被觸發，使其移到left:0的位置*/
+}
+
+
+
+/*頁首圖片*/
+.banner{
+	width: 100%;
+	height: 95vh;
+	margin: auto;
+	/*100%的高度是看內容物撐開的大小*/
+	/*vh是視窗大小*/
+	background: linear-gradient(0deg,rgba(219,208,180,.5),rgba(0,0,0,.3)) center center / 100% 100%,			
+				url("../images/pexels-photo-683039.jpeg")right center / auto 100%;
+	/*做漸層*/
+
+}
+.container{
+	width: 100%;
+	max-width: 1200px;
+	/*做類似RWD的效果*/
+	height: 100%;
+	margin: auto;
+	/*為了置中*/
+	font-family: 'Noto Sans TC', sans-serif;
+	/*微軟正黑體*/
+	display: flex;
+}
+.banner-text{
+	height: 50%;
+	/*為了flex要設高度*/
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	/*主軸對齊中間*/
+	flex-direction: column;
+	/*設定主軸直向*/
+	align-items: center;
+	margin: auto ;
+	border: 2.5px solid #bd9e4b;
+	
+	/*box-shadow: -100px -50px 0 0px #bd9e4b;*/
+	color: #fff;
+	backdrop-filter: blur(3px);
+
+}
+.banner-text h1{
+	font-size: 3em;
+	border-bottom: 1px solid #fff;
+	/*底線*/
+	font-weight: 700;
+	transition: .5s;
+	line-height: 1.7;
+
+
+}
+.banner-text p{
+	font-size: .5em;
+	padding: 20px;
+	transition: .5s;
+	
+
+
+}
+.banner-text:hover{
+	backdrop-filter: blur(5px);
+}
+.banner-text:hover h1{
+	color: #bd9e4b;
+	border-bottom: 1px solid #bd9e4b;
+
+}
+.banner-text:hover p{
+	font-size: 1em;
+	color: #000;
+}
+
+/*圖文說明區*/
+.section{
+	width: 100%;
+	height: 230vh;
+	background: url('../images/pexels-photo-1323712.jpeg') center center / cover;
+	
+}
+.sec-text{
+	width: 90%;
+	padding: 100px 0 0;
+	margin: 0 50px;
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #bd9e4b;
+	position: relative;
+	box-sizing: border-box;
+	transform: translateY(0%);
+	transition: .5s;
+
+
+
+}
+.sec-text h1{
+	font-size: 5em;
+	
+
+}
+.sec-text p{
+	font-size: 1.2em;
+
+}
+
+.sec-text::after{
+	display: block;
+	content: '';
+	background-color: #bd9e4b;
+	width: 2px;
+	height: 0%;
+	position: absolute;
+	top: -10px;
+	right: 300px;
+	transition: .3s;
+	box-shadow: 60px -20px 0 #bd9e4b,
+				120px 20px 0 #bd9e4b,
+				180px 0  0 #bd9e4b;
+
+	
+
+}
+.sec-text:hover{
+	transform: translateY(10%);
+}
+.sec-text:hover::after{
+	height: 50%;
+}
+
+
+.con{
+	width: 1500px;
+	height: 80vh;
+	margin: 200px auto 0;
+	background-color: #fff;
+	display: flex;
+	position: relative;
+
+
+	
+}
+.con img{
+	height: 100%;
+
+}
+.con .imag1{
+	width: 40%;
+	
+}
+.con .imag2{
+	width: 60%;
+
+
+	
+}
+.con .text{
+	background-color: rgba(0,0,0,.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 300px;
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #fff;
+}
+.con .text h2{
+	font-size: 30px;
+	line-height: 70px;
+}
+.con .text p{
+	font-size: 18px;
+}
+
+
+/*圖片區*/
+.article{
+	width: 1300px;
+	height: 76vh;	
+	margin: 0 auto;
+	background: url("../images/pexels-photo-450055.jpeg");
+	
+
+}
+
+.article .art-text{
+	width: 1500px;
+	padding: 200px 100px 100px 0;
+	/*margin: 0 50px;*/
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #bd9e4b;
+	box-sizing: border-box;
+	text-align: right;
+	transform: translateY(0%);
+	transition: .5s;
+
+
+}
+.article .art-text h1{
+	font-size: 5em;
+}
+.article .art-text p{
+	font-size: 1.2em;
+}
+
+.article .art-text:hover{
+	transform: translateY(10%);
+}
+.wrap{
+	width: 100%;
+	display: flex;
+	/*height: 100%;*/
+	/*align-items: center;*/
+	margin: 0 auto;
+	background: url();
+}
+
+.item{
+	width: 25%;
+	position: relative;
+	
+
+
+}
+.item img{
+	opacity: 0;
+	width: 100%;
+	/*vertical-align: middle;*/
+	/*只對inline特性的有效果，img是INLINE所以可以*/
+	transition: .5s;
+}
+.item:hover img{
+	opacity: 1;
+}
+
+.item-text{
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 25px;
+	font-family: 'Noto Sans TC', sans-serif;
+	/*opacity: 1;*/
+	transition: .5s;
+
+}
+.item:hover .item-text{
+	background-color: rgba(0,0,0,.5);
+
+}
+
+
+.item h2{
+	color: #ccc;
+	padding-bottom: 10px;
+	font-size: 1.5em;
+	
+
+}
+
+
+.item h2:after{
+	content: "";
+	display: block;
+	width: 0%;
+	height: 2px;
+	margin: 10px 0;
+	background-color: #dee;
+	transition: .5s .3s;
+
+
+}
+
+.item:hover h2:after{
+	width: 80%;
+
+}
+
+
+.item p{
+	color: #fff;
+	font-size: 1em;
+	opacity: 0;
+	transition: .5s .3s;
+
+}
+.item:hover p{
+	opacity: 1;
+}
+
+/*分店欄位*/
+.location{
+	width: 100%;
+	height: 120vh;
+	/*display: flex;*/
+	/*align-items: center;*/
+
+	/*對齊交錯軸線中央*/
+	background: url('../images/pexels-photo-5912576.jpeg');
+
+}
+.location .loc-text{
+	width: 90%;
+	padding: 100px 0;
+	margin: 0 50px;
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #bd9e4b;
+	box-sizing: border-box;
+	transform: translateY(0%);
+	transition: .5s;
+}
+
+
+.location .loc-text h1{
+	font-size: 5em;
+}
+.location .loc-text p{
+	font-size: 1.2em;
+}
+
+
+.location .loc-text:hover{
+	transform: translateY(10%);
+
+
+
+}
+
+
+.wrap2{
+	width: 1500px;
+	display: flex;
+	/*flex-direction: column;
+	align-content: center;*/
+	/*對齊交錯軸線中央*/
+	margin: auto;
+	align-items: center;
+}
+.item2{
+	width: 370px;
+	margin: 65px;
+	text-align: center;
+	background-color: #fff;
+	/*border: 1px solid #ccc;*/
+	transition: .5s;
+	
+}
+
+.item2:hover{
+	transform: translateY(-50px);
+	
+}
+.item2 img{
+	width: 100%;
+	vertical-align: middle;
+	/*讓圖下方的空白消失*/
+}
+.item2-text{
+	font-family: 'Noto Serif TC', serif;
+	position: relative;
+	padding: 20px;
+	transition: .2s;
+}
+.item2-text h2{
+	padding-bottom: .3em;
+	margin-bottom: .3em;
+	font-size: 20px;
+	font-weight: 900;
+	
+}
+.item2-text p{
+	line-height: 1.5;
+
+}
+
+.item2:hover .item2-text{
+	background: linear-gradient(0deg,#d8dbe6,#2e689e);
+
+}
+.item2-text::before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: 0;
+	/*做三角形需要的*/
+	border-top: 50px solid transparent;
+	border-left: 185px solid #fff;
+	border-right:185px solid #fff; 
+	/*邊框不可用%呈現，僅能用vw調整*/
+	transform: translateY(-99%);
+	/*translateY(o) 指定元素由參考點縱向移動 o 距離*/
+	
+}
+
+.item2:hover .item2-text::before{
+	border-left: 185px solid #2e689e;
+	border-right:185px solid #2e689e ; 
+}
+
+.item2 h2::after{
+	display: block;
+	content: "";
+	width: 80%;
+	height: 1px;
+	background-color: #000;
+	margin-top: .3em;
+	transition: .2s;
+}
+
+.item2-text:hover{
+	color: #fff;
+
+}
+.item2-text:hover h2::after{
+	background-color: #fff;
+	width: 100%;
+
+}
+
+/*footer*/
+.main-footer{
+	width: 100%;
+	height: 40vh;
+	/*padding: 50px 0 0;*/
+	background-color: #3b3028;
+	font-family: 'Noto Serif TC', serif;
+	position: relative;
+}
+
+.main-footer .footer-logo{
+	display: flex;
+	width: 150px;	
+	margin: 0 auto 50px;
+	border: 1px solid #bd9e4b;
+	border-bottom: 10px solid rgba(189,158,75,.9);
+	border-top: transparent;
+	background-color: transparent;
+	text-align: center;
+	background-color: #3d3026;
+
+
+}
+.main-footer .footer-logo a{
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 18px;
+	/*border-bottom: 1px solid #fff;*/
+	padding: 60px 2px;
+	margin: 0 auto;
+	
+}
+
+.main-footer .footer-logo::after{
+	display: block;
+	content: '';
+	width: 10px;
+	height: 5px;
+	background-color: #bd9e4b;
+	position: absolute;
+	right: 300px;
+	top: 70px;
+	box-shadow: 80px 50px 0 #ad8566,
+				-80px 50px 0 #ad8566,
+				150px 0px 0 #fff,
+				-150px 0px 0 #fff;
+
+}
+
+.main-footer .footer-con{
+	width: 1000px;
+	display: flex;
+	/*justify-content: center;*/
+	padding: 50px 0 15px;
+	margin: 0 auto;
+	border-bottom: 1px dotted #aaa; 
+
+}
+.footer-con ul{
+	width: 43%;
+}
+.footer-con ul a{
+	padding: 5px 7px;
+	color: #bd9e4b;
+	margin-right: 10px;
+	border: 1px solid #bd9e4b;
+	border-radius: 50%;
+	font-size: 14px;
+	transition: .3s .2s;
+}
+
+.footer-con ul a:hover{
+	color: #eee;
+}
+
+.footer-con .tel{
+	width: 57%;
+	position: relative;
+	
+	
+}
+
+.footer-con .tel .fa{
+	color: #bd9e4b;
+	font-size: 40px;
+	margin-right: 10px;
+	position: absolute;
+	right: 70px;
+	bottom: 0;
+	transition: .3s .2s;
+}
+
+.footer-con .tel a{
+	text-decoration: none;
+	color: #fff;
+
+}
+.footer-con .tel a span{
+	display: block;
+
+}
+
+.footer-con .tel a:last-child{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	
+}
+
+.footer-con .tel a:hover .fa{
+	color: #eee;
+}
+
+.main-footer .copyright{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 70px;
+	color: #aaa;
+	font-size: 14px;
+	position: relative;
+
+}
+
+.main-footer .copyright::before{
+	display: block;
+	content: '';
+	width: 10px;
+	height: 5px;
+	background-color: #bd9e4b;
+	position: absolute;
+	left: 400px;
+	bottom: 70px;
+	box-shadow: 80px 50px 0 #ad8566,
+				-80px 50px 0 #ad8566,
+				-150px 0px 0 #fff,
+				-230px 50px 0 #ad8566;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*導覽列電腦版*/
+@media  screen and (min-width: 768px) {
+	
+	.menu_btn{
+		display: none;
+	}
+	.header{
+		display: flex;
+		background-color: #eee;
+		justify-content: space-between;
+		/*align-items: center;*/
+	}
+	.logo{
+		padding-top: 0px;
+	}
+
+	nav{
+		position: relative;
+		left: 0;
+		display: flex;
+		width: auto;
+		height: auto;
+		top: 0;
+		background-color: transparent;
+
+	}
+	nav a{
+		border-bottom: none;
+		position: relative;
+	}
+
+	nav a::after{
+	content: '';
+	width: 1px;
+	height: 50%;
+	background-color: #bd9e4b;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 20px;
+
+	
+	}
+
+@media  screen and (max-width: 767px) {
+	/*手機版*/
+
+	body{
+	font-size: 7px;
+	/*讓文字等比例縮小*/
+	}
+	.banner{
+		height: 80vh;
+	}
+
+}
