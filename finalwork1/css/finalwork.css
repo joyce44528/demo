@@ -73,7 +73,6 @@ html,body{
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    height: 50px;
     
 
 }
@@ -116,7 +115,6 @@ html,body{
 }
 
 .content{
-    width: 100%;
     background-color: #fff;
     
     
@@ -128,7 +126,6 @@ html,body{
 }
 
 .content .banner{
-    width: 100%;
     padding: 90px 0;
     background: url('https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png') center center / cover;
     display: flex;
@@ -138,7 +135,6 @@ html,body{
 }
 
 .banner p{
-    width: 100%;
     font-size: 34px;
     color: #fff;
     letter-spacing: 1px;
@@ -157,7 +153,6 @@ html,body{
 }
 
 .content .intro{
-    width: 100%;
     display: flex;
     justify-content: space-around;
     
@@ -190,7 +185,7 @@ html,body{
 
 }
 
-.item-text p,li{
+.item-text p,.item-text li{
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: .1em;
@@ -313,6 +308,7 @@ html,body{
 .data fieldset input:last-child:hover{
     background-color: rgb(196, 114, 47);
     transform: scale(1.2,1.2);
+    cursor: pointer;
 }
 .footer{
     display: flex;
