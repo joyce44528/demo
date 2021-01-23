@@ -27,7 +27,7 @@ html,body{
 }
 .nav .menu{
     display: flex;
-    padding: 3px 10px;
+    padding: 5px 10px;
     line-height: 1;
 
 }
@@ -135,6 +135,7 @@ html,body{
 }
 
 .banner p{
+    width: 100%;
     font-size: 34px;
     color: #fff;
     letter-spacing: 1px;
