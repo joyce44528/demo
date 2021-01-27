@@ -134,7 +134,7 @@ html,body{
 
 }
 
-.banner p{
+.banner h2{
     width: 100%;
     font-size: 34px;
     color: #fff;
@@ -147,7 +147,7 @@ html,body{
 
 }
 
-.banner:hover p{
+.banner:hover h2{
     background-color:rgba(0, 0, 0, 0.1);
     transform: translateY(10%);
     backdrop-filter: blur(3px);
@@ -194,7 +194,7 @@ html,body{
 }
 
 
-.item-text li + li::before{
+.item-text li::before{
     content: '·';
     color: #000;
     
@@ -204,7 +204,7 @@ html,body{
     transform: translateY(-10%);
 }
 
-.content h2{
+.intro h2,.price h2,.message h2{
     text-align: center;
     font-size: 24px;
     font-weight: bold;
