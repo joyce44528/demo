@@ -27,7 +27,7 @@ html,body{
 }
 .nav .menu{
     display: flex;
-    padding: 5px 10px;
+    padding: 3px 10px;
     line-height: 1;
 
 }
@@ -73,8 +73,7 @@ html,body{
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    
-
+  
 }
 
 .main-nav h1 a{
@@ -154,6 +153,7 @@ html,body{
 }
 
 .content .intro{
+    width: 100%;
     display: flex;
     justify-content: space-around;
     
@@ -186,7 +186,7 @@ html,body{
 
 }
 
-.item-text p,.item-text li{
+.item-text p,li{
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: .1em;
@@ -303,13 +303,13 @@ html,body{
     color: #fff;
     transform: scale(1,1);
     transition: .2s .1s;
+    cursor: pointer;
 }
 
 
 .data fieldset input:last-child:hover{
     background-color: rgb(196, 114, 47);
     transform: scale(1.2,1.2);
-    cursor: pointer;
 }
 .footer{
     display: flex;
