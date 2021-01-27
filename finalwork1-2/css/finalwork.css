@@ -153,7 +153,6 @@ html,body{
 }
 
 .content .intro{
-    width: 100%;
     display: flex;
     justify-content: space-around;
     
@@ -186,7 +185,7 @@ html,body{
 
 }
 
-.item-text p,li{
+.item-text p,.item-text li{
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: .1em;
