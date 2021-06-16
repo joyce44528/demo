@@ -1,0 +1,182 @@
+
+/* 設定header的屬性 */
+
+.header{
+    height: 110vh;
+    min-height: 840px;
+    margin-top: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    // 避免橫著拿時會跑版
+    background-image: linear-gradient(to right, rgba($color-bg-pink, .8), rgba($color-bg-purple, .9)), url('../img/snazzy-image-2.jpg'); 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    
+
+    /* 設定這個版面的形狀可以用clip path這個css屬性來切 */
+    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+    position: relative;
+
+   //當clip-path若被支援
+    @supports (clip-path: polygon(0 0)) or  (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+    
+    }
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), 
+    only screen and (-webkit-min-device-pixel-radio: 2) and (min-width: 37.5em),  //safari需要使用這樣的格式
+    only screen and (min-width: 93.75em){
+        background-image: linear-gradient( 
+        to right bottom,
+        rgba($color-bg-pink, .8), rgba($color-bg-purple, .9)),url('../img/snazzy-image-2-large.jpg');
+        
+        
+        
+        
+    }
+
+
+
+    @include respond(tab-port) {
+        -webkit-clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        
+    }
+
+
+
+    /* 設定logo圖片 */
+    /* 設定圖片的位置 */
+   &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+         /* 因外面包裹的a是inline元素，所以要讓它變block才可以控制他的寬高 */
+         line-height: 1;
+
+         a{
+            display: block;  
+            text-decoration: none;
+            color: $color-black;
+            font-size: 3rem;
+            vertical-align: middle;
+        }
+
+        
+    }
+   
+    /* 設定圖片(img本身)的大小 */
+   &__logo{
+        height: 3.5rem;
+    }
+
+  
+
+
+  &__img-box {
+    width: 35rem;
+    height: 35rem;
+     // background-color: rgba($color-bg-pink, .9);
+     background: url('../img/bg-book.png') center center / cover;
+     border-radius: 50%;
+     padding: 2.5rem;
+     box-shadow: 3px 3px 5px #b0b7c0, -3px -3px 5px rgba($color-text-white, .7);
+     position: absolute;
+     top: 30%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     overflow: hidden;
+     backface-visibility: hidden;
+     transition: all .4s;
+     z-index: -1;
+     opacity: .85;
+     
+
+     @include respond(tab-port) {
+         width: 30rem;
+         height: 30rem;
+     }
+
+ }
+
+    /* 讓h1可以置中所設定的父層 */
+   &__text-box{
+       min-width: 280px;
+       width: 40%;
+        position: absolute;
+        padding: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        background-color: rgba(#fff, .6);
+        background-color: rgba($color-primary-light, .5);
+
+        border-radius: 10px;
+   
+        @include respond(tab-land) {
+            width: 50%;
+        }
+
+        @include respond(tab-port) {
+            width: 60%;
+        }
+        
+        @include respond(phone){
+            width: 80%;
+         
+
+        }
+
+
+        
+
+
+        
+    }
+
+    &__h1-img {
+        width: 40rem;
+        padding: 2rem;
+
+        @include respond(phone) {
+            width: 36rem;
+        }
+    
+    }
+
+    &__scroll-down::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        height: 20%;
+        background: rgba(255, 255, 255, .4);
+    }
+
+    &__scroll-down::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        height: 20%;
+        background: $color-primary-dark;
+        animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+   
+    
+}

@@ -1,0 +1,224 @@
+.navigation {
+    
+
+
+    &__checkbox {
+        display: none;
+
+        
+    }
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+        
+    }
+
+    &__checkbox:checked ~ &__nav {
+        width: 100%;
+        opacity: 1;
+        top: 5rem;
+        left:  0;
+    }
+    
+
+    // 比background來的大，讓他可以遮住background
+    &__button {
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        background-color: transparent;
+        position: fixed;
+        top: 6rem;
+        right: 7rem;
+        // 讓他遮住background
+        z-index: 2000;
+        // btn的陰影
+        box-shadow: 3px 3px 5px #b0b7c0, -3px -3px 5px rgba($color-text-white, .7);
+        // box-shadow: 0 1rem 3rem rgba($color-black, $alpha: .2);
+        // 讓裡面的icon水平置中
+        // text-align: center;
+        cursor: pointer;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+
+        }
+
+    }
+
+//    nav的漸層背景
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        // radial-gradient是同心圓狀的漸層，從圓心->圓周
+        background-image: radial-gradient(rgba($color-bg-pink, .9),rgba($color-bg-purple,1));
+        // 固定他在視窗的位置
+        position: fixed;
+        top: 6.5rem;
+        right: 7.5rem;
+
+        // 讓它保持在所有物件的最上方，不會被遮住
+        z-index: 1000;
+        transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
+
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+
+        }
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+
+        }
+
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 0%;
+        // 也設定posf是因為若nav開啟時也滾動，才能固定在視窗的相同位置
+        position: fixed;
+        top: 5rem;
+        left:  -500px;
+        // 大於background即可
+        z-index: 1500;
+        // 在沒有觸發checkbox時先將他藏起來
+        opacity: 0;
+        
+        // display: none;
+        transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    &__list {
+        // 設定垂直-水平置中
+        @include posa-center;
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        margin: 1rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 3rem;
+            font-weight: 300;
+            color: $color-black;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            // 這裡的設定和section-book的一樣，做出梯形的形狀
+            background-image: linear-gradient(120deg, transparent 0%,transparent 50%, $color-black 50%);
+
+            // 利用bgz的改變，當bgz 越大，bg會越大，超過了link範圍則不可見，只剩下透明部分越來越多，直到230%會完全覆蓋
+            background-size: 236%;
+            transition: all .4s ease-out;
+
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+
+            }
+        
+        }
+        
+        &:hover,
+        &:active {
+            // 當bgp為50%時，會呈現原本bgi的設定(透明部分一半.白色一半)，bgp100%時白色會完全覆蓋link範圍，利用tris就可以做出動畫效果
+
+            background-position: 100%;
+            color: $color-text-white;
+            // 做出滑動的效果
+            transform: translateX(1rem);
+        }
+
+         
+    }
+
+    // icon
+    &__icon {
+        position: relative;
+        // 第二條線長度次之
+        width: 2rem;
+        // 調整垂直置中
+        margin: 3.2rem;
+        transition: all .8s;
+        backface-visibility: hidden;
+
+        // 3條線共同設定
+        &,
+        &::before,
+        &::after {
+            height: 2px;
+            background-color: $color-gray-dark;
+            display: inline-block;
+        }
+
+        // 偽類共同設定
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+        }
+
+        // 第一條線設定(最短)
+        &::before {
+            width: 1rem;
+            top: -1rem;
+            transition: all .4s;
+        }
+        //第三條線設定(最長) 
+        &::after {
+            width: 3rem;
+            top: 1rem;
+            transition: all .8s;
+        }
+    }
+
+    // icon的hover效果
+    &__button:hover &__icon::before {
+        width: 3rem;
+        
+    }
+
+    &__button:hover &__icon {
+        width: 3rem;
+        margin-left: 2.2rem;
+    }
+
+    // checked時icon的形變
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+    &__checkbox:checked + &__button &__icon::before {
+        // 歸到0的位置
+        top: 0;
+        // 因為本來是1rem，所以設定了寬度
+        width: 3rem;
+        transform: rotate(-135deg);
+    }
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+
+//    視差滾動時nav__button顏色
+    &__color {
+        background-color: rgba($color-text-white, .8);
+       transition: all .5s;
+    }
+   
+}

@@ -1,0 +1,57 @@
+.scroll-up {
+    position: fixed;
+    bottom: 4rem;
+    right: 7rem;
+    width: 7rem;
+    height: 7rem;
+    // padding: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #9ECEDA;
+    transform: translateY(160%);
+    transition: transform .5s;
+
+    
+    
+
+    @include box-shadow-3d;
+
+    @include respond(tab-port) {
+        bottom: 4rem;
+        right: 4rem;
+    }
+
+    @include respond(phone) {
+        bottom: 4rem;
+        right: 3rem;
+    }
+
+    &-btn {
+        &,
+        &:link,
+        &:visited {
+            display: block;
+            color: $color-primary-dark;
+            text-decoration: none;
+            line-height: 1;
+            font-size: 1.6rem;
+            transition: all .2s;
+        }
+        
+        &:hover,
+        &:active {
+            transform: translateY(3px);
+        }
+
+        
+        
+    }
+
+    &-img {
+        width: 100%;
+        transform: translate(-1px, 0) ;
+
+
+    }
+}
