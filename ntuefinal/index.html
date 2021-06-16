@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://npmcdn.com/flexslider@2.6.0/flexslider.css">
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>一見鐘情 | 國北新鮮人指南</title>
+    </head>
+    <body>
+        <!-- navigation -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <!-- nav的漸層背景 -->
+            <div class="navigation__background">&nbsp;</div> 
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>01</span>About</a></li>
+                    <li class="navigation__item"><a href="#section__book-1" class="navigation__link"><span>02</span>Sect.1</a></li>
+                    <li class="navigation__item"><a href="#section__book-2" class="navigation__link"><span>03</span>Sect.2</a></li>
+                    <li class="navigation__item"><a href="#section__book-3" class="navigation__link"><span>04</span>Sect.3</a></li>
+                    <li class="navigation__item"><a href="#section__detail" class="navigation__link"><span>05</span>Sect.4</a></li>
+                    <li class="navigation__item"><a href="#section__detail" class="navigation__link"><span>06</span>Buy now!</a></li>
+                    <li class="navigation__item"><a href="#section-stories" class="navigation__link"><span>07</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>08</span>Your reason</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header class="header scroll" id="header">
+            <div class="header__border-box">
+                <div class="header__logo-box">
+                    <a href="##"><img data-srcset="img/logo-small.png" alt="logo" class="header__logo lazyload">The Great B</a>
+                </div>
+                <div class="header__img-box"></div>
+                <div class="header__text-box">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main">   
+                            <img class="header__h1-img" src="img/logo-text_0.png" alt="一見鐘情-Love at first sight.">
+                        </span>
+                        <span class="heading-primary--sub">國北新鮮人指南刊物</span>
+                    </h1>
+                    <a href="#section__detail" class="btn btn--white btn--animate">現正熱賣中!</a>
+                </div>
+                <span class="header__scroll-down"></span>
+            </div>
+   
+        </header>
+        <main>
+            <section class="section-about" id="section-about">
+                <div class="u-left-text u-margin-bottom-small">
+                    <h2 class="heading-secondary">
+                        About
+                        <span class="heading-secondary--sub"> 前言</span>
+                    </h2>
+                </div>
+            <div class="flex-box">
+                <div class="col-30">
+                    <h3 class="heading-tertiary  u-margin-bottom-small animated">一見鍾情的理由</h3>
+                    <p class="paragraph animated">
+                        首先，氣味和聲音是一見鍾情原因之一。
+                       <br> 英國和波蘭研究人員在《心理學前沿》上發表了一報告說: 氣味和聲音在第一印象的形成中發揮了重要的作用。  
+                    </p>
+                    <p class="paragraph animated">
+                        118巷弄的正中午飄香.北師美術館旁的鳥鳴聲...國北同時具備了好的氣味與聲音。
+                    </p>
+
+                    <a href="#section__book-1" class="btn-text animated btn-text--linkbook
+                    ">我想看更多! &rarr;</a>
+                </div>
+                <div class="col-70">
+                    <div class="carousel animated">
+                         <img data-srcset="img/sect-about.png"
+                         alt="photo1"
+                         class="carousel__photo carousel__photo--p1 lazyload">
+                    </div>
+                </div>
+            </div> 
+            </section>
+            <section class="book-wrap">
+                <div class="u-left-text u-margin-bottom-big">
+                    <h2 class="heading-secondary heading-secondary--dn">
+                        Section overview
+                        <span class="heading-secondary--sub"> 章節總覽
+                </div>
+                <section class="section__book section__book-1" id="section__book-1">
+                    <div class="flex-box">
+                        <div class="col-50 col-50--top animated">
+                            <div class="u-margin-bottom-big">
+                                <h2 class="heading-secondary">
+                                    Sect.01
+                                    <span class="heading-secondary--sub">上學途中的風景</span>
+                                </h2>
+                            </div>
+                            
+                            <div class="flex-img">
+                                <!-- 輪播照片 -->
+                                <div class="flexslider">
+                                    <ul class="slides">
+                                        <li><img data-srcset="img/sect1-1-1.jpg" alt="" class="lazyload"></li>
+                                        <li><img data-srcset="img/sect1-1-3.jpg" alt="" class="lazyload"></li>
+                                    </ul>
+                                </div>
+                            </div>       
+                        </div>
+                        <div class="col-50 col-50--text col-50--text-blue animated">
+                            <div class="text-content paragraph">
+                                <h3 class="heading-tertiary">
+                                    Scenery, day of day | 北師美術館
+                                </h3>
+                               <p class="paragraph">
+                                   國立台北教育大學，
+                                   <br>台灣近代美術史與美術教育的發源地。
+                                   <br>自日籍教師石川欽一郎起，如倪蔣懷、陳植琪、陳澄波……等前輩藝術家皆為本校出身。
+                               </p>
+                                <p class="paragraph">
+                                    「北師」二字於台灣美術史上意義非凡，為了發揚並紀念此歷史，並保留「北師」舊稱，故命名為「北師美術館」。
+                                </p>
+                            </div>
+                            <div class="question-svg question-svg--blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 226">
+                                    <path id="js-main-fukidashi" fill="#ffffff" d="M192,123c-26.93,43.88-69.58,79.85-124.59,100.76A30.84,30.84,0,0,1,56.35,226c-17.91,0-25.73-19.37-10.56-33.6C79.43,162.21,71,127,33.78,127H0V0H192Z" style="fill: #3d526e;"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section__book section__book-2 animated" id="section__book-2">
+                    <div class="flex-box">
+                        <div class="col-50 col-50--top">
+                            <div class="u-margin-bottom-big">
+                                <h2 class="heading-secondary">
+                                    Sect.02
+                                    <span class="heading-secondary--sub">走進國北校園</span>
+                                </h2>
+                            </div>
+                            <div class="flex-img">
+                                <!-- 輪播照片 -->
+                                <div class="flexslider">
+                                    <ul class="slides">
+                                        <li><img data-srcset="img/sect2-1-1.jpg" alt="" class="lazyload"></li>
+                                        <li><img data-srcset="img/sect2-1-2.jpg" alt=""  class="lazyload"></li>
+                                    </ul>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="col-50 col-50--text col-50--text-sliver">
+                            <div class="text-content paragraph">
+                                <h3 class="heading-tertiary">Come on! 防空洞藝廊</h3>
+                               <p class="paragraph">
+                                   推動閒置空間再利用，將在荒廢多年的日據時代地下防空洞，改建成燈光優美.展示作品的藝廊。
+                                   <br>不只有防空洞被改造，就連校長宿舍也因十餘年無人居住，變成荒蕪的閒置建築，所以校長宿舍也改建為藝文展示中心。
+                               </p>
+                            </div>
+                            <div class="question-svg question-svg--sliver">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 226">
+                                    <path id="js-main-fukidashi" fill="#ffffff" d="M192,123c-26.93,43.88-69.58,79.85-124.59,100.76A30.84,30.84,0,0,1,56.35,226c-17.91,0-25.73-19.37-10.56-33.6C79.43,162.21,71,127,33.78,127H0V0H192Z" style="fill: #DFD5D5;"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section__book section__book-3" id="section__book-3">
+                    <div class="flex-box">
+                        <div class="col-50 col-50--top">
+                            <div class="u-margin-bottom-big">
+                                <h2 class="heading-secondary">
+                                    Sect.03
+                                    <span class="heading-secondary--sub">放學後的空閒</span>
+                                </h2>
+                            </div>
+                            <div class="flex-img">
+                                <!-- 輪播照片 -->
+                                <div class="flexslider">
+                                    <ul class="slides">
+                                        <li><img data-srcset="img/sect3-1-1.jpg" alt="" class="lazyload"></li>
+                                        <li><img data-srcset="img/sect3-1-2.jpg" alt="" class="lazyload"></li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>       
+                        </div>
+                        <div class="col-50 col-50--text col-50--text-brown animated">
+                            <div class="text-content paragraph">
+                                <h3 class="heading-tertiary">Sunset, Smell | 118巷</h3>
+                                <p class="paragraph">若是出校門後左轉直走，就是國北和台大師生最喜歡去吃飯的地方118巷。
+                                    <br>在這裡，各種多樣化的餐廳，讓不管想吃什麼料理的你，都可以大飽口福。想知道更多資訊，可以參考下一章，將會有更詳細的介紹喔!
+                                </p>   
+                            </div>
+                            <div class="question-svg question-svg--brown">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 226">
+                                    <path id="js-main-fukidashi" fill="#ffffff" d="M192,123c-26.93,43.88-69.58,79.85-124.59,100.76A30.84,30.84,0,0,1,56.35,226c-17.91,0-25.73-19.37-10.56-33.6C79.43,162.21,71,127,33.78,127H0V0H192Z" style="fill: #665F5E;"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section__book section__book-4 animated" id="section__book-4">
+                    <div class="flex-box">
+                        <div class="col-50 col-50--top">
+                            <div class="u-margin-bottom-big">
+                                <h2 class="heading-secondary">
+                                    Sect.04
+                                    <span class="heading-secondary--sub">附錄:美食蒐集隊</span>
+                                </h2>
+                            </div>
+                            <div class="flex-img">
+                                <!-- 輪播照片 -->
+                                <div class="flexslider">
+                                    <ul class="slides">
+                                        <li><img data-srcset="img/sect4-1-2.jpg" alt="" class="lazyload"></li>
+                                        <li><img data-srcset="img/sect4-1-3.jpg" alt="" class="lazyload"></li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="col-50 col-50--text col-50--text-red">
+                            <div class="text-content paragraph">
+                                <h3 class="heading-tertiary">Appendix</h3>
+                                <p>Q: 飢腸轆轆卻總是吃同一間的你 :-(
+                                    <ul class="text-option">
+                                        <li>（Ａ）傳說中的薯餅塔</li>
+                                        <li>（Ｂ）辣辣辣辣辣</li>
+                                        <li>（Ｃ）神之便宜椒麻雞</li>
+                                        <li>（Ｄ）夜晚沁涼小點</li>
+                                    </ul>
+                                    A: ( ABCD ) 我全都要!
+                                    </p>
+                                    <p><strong>由嚮導小鐘所推薦的精選美食、總結各區最受歡迎店家所繪製的美食地圖來囉! </strong>
+                                     想知道國北附近最不能錯過的好料是什麼嗎? 快滑到下方手動訂書，讓小鐘帶領你吃遍國北吧!</p>
+                            </div>
+                            <div class="question-svg question-svg--red">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 226">
+                                    <path id="js-main-fukidashi" fill="#ffffff" d="M192,123c-26.93,43.88-69.58,79.85-124.59,100.76A30.84,30.84,0,0,1,56.35,226c-17.91,0-25.73-19.37-10.56-33.6C79.43,162.21,71,127,33.78,127H0V0H192Z" style="fill: #C1391D;"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="section__detail" id="section__detail">
+                <div class="flex-box flex-box--center">
+                    <div class="book-details">
+                        <div class="col-50 col-50--left">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    <span class="heading-secondary--sub">絕讚好評中!</span>
+                                    一見鐘情-國北新鮮人指南     
+                                </h2>
+                            </div>
+                            
+                            <div class="detail-box">
+                                <ul class="detail-buy">
+                                    <!-- <li>數量: 100</span></li> -->
+                                    <li>NT$ <span class="detail-buy--price">100</span></li>
+                                    <li><a class="btn-text btn-text--green" href="#popup">直接購買 &rarr;</a></li>
+                                </ul>
+                                <div class="detail-toggle">詳細書訊
+                                    <span class="detail-toggle-down">&equiv;</span>
+                                </div>
+                                <ul class="detail-content">
+                                    <li>文&圖 : 蒨蒨 賴安郁</li>
+                                    <li>插畫設計 : Cashme鄭昕</li>
+                                    <li>出版： 厲害的B組有限公司</li>
+                                    <li>出版日期： 2021/06 初版</li>
+                                    <li>裝訂： 平裝</li>
+                                    <li>語言： 中文</li>
+                                    <li>頁數： 40</li>
+                                    <li>開數： 25k</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="col-50 col-50--right">
+                            <img data-srcset="img/book-demo-small.png" alt="book-cover-photo" class="lazyload">
+                            <!-- 想讓它變直的 -->
+                            <!-- <h3 class="u-margin-top-small heading-tertiary heading-tertiary--green">國北新鮮人指南刊物! </h3> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-stories" id="section-stories">
+                
+                <div class="u-left-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Stories
+                        <div class="heading-secondary--sub">一見鍾情的理由</div>
+                    </h2>
+                </div>
+                <div class="row">
+                    <!-- 蒨蒨 -->
+                    <div class="story animated">
+                        <figure class="story__shape">
+                            <img data-srcset="../img/chenchen-photo.jpg" alt="Person on a tour" class="story__img story__img--left lazyload">
+                            <figcaption class="story__caption">蒨 蒨</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">喜歡國北的原因</h3>
+                            <p class="paragraph">簡單溫馨的校園，雖然佔地小，但五臟俱全。圖書館藏書也非常豐富，附近的生活機能不管是美食、雜貨、生鮮等都非常方便。且擁有自己的美術館，充滿了人文藝術氛圍。</p>
+                        </div>
+                    </div>     
+                    <!-- 黃昱晨 -->
+                    <div class="story animated">
+                        <figure class="story__shape">
+                            <img data-srcset="../img/huang-photo.jpg" alt="Person on a tour" class="story__img lazyload">
+                            <figcaption class="story__caption">黃 昱 晨</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My Life is completely diffferent now.</h3>
+                            <p class="paragraph">國北地理位置相當的好，除了旁邊就有捷運站外，離公館商圈和師大夜市都相當近，歷史悠久的建築加上美術館，讓整個校園更充滿了人文氣息，漫步在校內就能感受到愜意的氛圍。</p>
+                        </div>
+                    </div>
+                    <!-- 鄭昕 -->
+                    <div class="story animated">
+                        <figure class="story__shape">
+                            <img data-srcset="../img/cashme-photo.jpg" alt="Person on a tour" class="story__img lazyload">
+                            <figcaption class="story__caption">Cashme鄭昕</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My Life is completely diffferent now.</h3>
+                            <p class="paragraph">我要後我們。順不多本來不，孩子不是有看很香還要的部，的地方的非常我真怎麼那創作者，法的不覺永遠時間直以來，一陣子是這，為是重太一樣那個。道上在外，人可能就克時候：客不痞客邦了一個出因為，為什麼果我到真的剛剛很多不是上，後看好都好告本本你應該他們的，狀心的沒有好嗎一直說。</p>
+                        </div>
+                    </div>
+                    <!-- 賴安郁 -->
+                    <div class="story animated">
+                        <figure class="story__shape">
+                            <img data-srcset="../img/annyu-photo.png" alt="Person on a tour" class="story__img lazyload">
+                            <figcaption class="story__caption">賴 安 郁</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family </h3>
+                            <p class="paragraph">
+                                能可能不得，我真的，第三回來收到的有參考，很多一張很明顯：到哪真好不有你知道。到後面很多部分慮這麼。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 蘇芳儀 -->
+                    <div class="story animated">
+                        <figure class="story__shape">
+                            <img data-srcset="../img/joyce-photo.jpg" alt="Person on a tour" class="story__img lazyload">
+                            <figcaption class="story__caption">蘇 芳 儀</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My Life is completely diffferent now.</h3>
+                            <p class="paragraph">我要後我們。順不多本來不，孩子不是有看很香還要的部，的地方的非常我真怎麼那創作者，法的不覺永遠時間直以來，一陣子是這，為是重太一樣那個。道上在外，人可能就克時候：客不痞客邦了一個出因為，為什麼果我到真的剛剛很多不是上，後看好都好告本本你應該他們的，狀心的沒有好嗎一直說。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-book"  id="section-book">
+                <div class="row animated">
+                    <div class="book">
+                        <form action="##" class="book__form">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Your turn!
+                                   <p class="paragraph">現在輪到你啦! 
+                                    <br>你愛上北教大的理由是什麼呢?
+                                    <br>送出表單，記錄下你與北教大的故事吧!</p></span>
+                                </h2>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="名字 / 暱稱" id="name" required>
+                                <label for="name" class="form__label">請寫下名字或暱稱</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="系級" id="department-level" required>
+                                <label for="department-level" class="form__label">所屬系所年級</label>
+                            </div>
+                            <div class="form__group form__group--radio u-margin-bottom-medium">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="male" name="sex" value="男性">
+                                    <label for="male" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                            男性
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="female" name="sex"  value="女性">
+                                    <label for="female" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                            女性
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="other" name="sex"  value="其他">
+                                    <label for="other" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                            其他
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                               <textarea id="your-reason" cols="30" rows="10" placeholder="寫下屬於你的故事吧" class="form__input"></textarea>
+                                <label for="your-reason" class="form__label"></label>
+                            </div>
+                            <div class="form__group">
+                                <textarea id="web-feeling" cols="30" rows="5" placeholder="對網頁的使用感想，有任何想法都可以讓開發者知道，以利改進喔(選填)" class="form__input"></textarea>
+                                 <label for="web-feeling" class="form__label"></label>
+                             </div>
+                            <div class="form__group">
+                                <button type="button" class="btn btn--green" id="submit-btn">送出 &rarr;</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+                
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <a class="footer__logo">
+                    <img data-srcset="img/logo-small.png" alt="Full logo" class="lazyload"> The Great B
+                </a>
+            </div>
+            <div class="footer__content">
+                <div class="footer__navigation">
+                       <ul class="footer__list">
+                           <li class="footer__item"><a href="##" class="footer__link">關於我們</a></li>
+                           <li class="footer__item"><a href="##" class="footer__link">聯絡我們</a></li>
+                           <li class="footer__item"><a href="##" class="footer__link">服務</a></li>
+                           <li class="footer__item"><a href="##" class="footer__link">Privacy policy</a></li>
+                           <li class="footer__item"><a href="##" class="footer__link">Terms</a></li>
+                       </ul>
+                </div> 
+               <div class="footer__social">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="##" class="footer__link footer__link--social"><i class="footer__link__icon icon-basic-mail"></i></a></li>
+                        <li class="footer__item"><a href="##" class="footer__link footer__link--social"><i class="footer__link__icon icon-basic-geolocalize-01"></i></a></li>
+                        <li class="footer__item"><a href="##" class="footer__link footer__link--social"><i class="footer__link__icon icon-basic-share"></i></a></li>
+                    </ul>
+               </div>
+               
+            </div>
+            <div class="footer__copyright">Copyright &copy;2021 蘇芳儀，本書插圖設計為Cashme鄭昕，內文&圖來自賴安郁.蒨蒨。部分背景圖來自RWD JP，僅為學習之用</div>
+        </footer>
+
+        <div class="scroll-up">
+            <a href="#header" class="scroll-up-btn">UP!
+                <img src="img/little-bell-unbg.png" alt="scroll-up img" class="scroll-up-img">
+            </a>
+        </div>
+        
+        <div class="popup" id="popup">
+            <a href="##" class="popup__toggle"></a>
+            <div class="popup__content">
+                <a href="##" class="popup__close">&times;</a>
+                <div class="toggle-btn">
+                    <div class="toggle-btn-cue-color" id="btn"></div>
+                    <a href="##" class="toggle-btn login" id="login-btn">Login</a>
+                    <a href="##" class="toggle-btn register" id="signUp-btn">Sign up</a>
+                </div>
+                <div class="img-box"><img data-srcset="img/logo-small.png" alt="photo" class="lazyload"></div>
+                <div class="main-form">
+                    <form action="" class="form__login" id="login">
+                        <div class="form__group">
+                            
+                            <input type="text" class="form__input" placeholder="使用者名稱" id="account-number" required>
+                            <label for="account-number" class="form__label">請輸入帳號</label>
+                            
+                        </div>
+                        <div class="form__group">
+                            <input type="password" class="form__input" placeholder="密碼" id="password" required>
+                            <label for="password" class="form__label">請輸入密碼</label>
+                        </div>
+                        <div class="form__group">
+                            <button class="btn-submit btn-submit-color-blue">登入 &rarr;</button>
+                        </div>
+                    </form>
+                    <form action="" class="form__register" id="register">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="姓名" id="lsignUp-name" required>
+                            <label for="name" class="form__label">註冊姓名</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder="電子郵件" id="signUp-email" required>
+                            <label for="signUp-email" class="form__label">email信箱</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" class="form__input" placeholder="密碼" id="signUp-password" required>
+                            <label for="signUp-password" class="form__label">至少12位元包含大小寫英文字母</label>
+                        </div>
+                        <div class="form__group">
+                            <button class="btn-submit">註冊 &rarr;</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+       
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider.js"></script>
+        <script src="js/lazysizes.min.js"></script>
+        <script src="js/btn-transform.js"></script>
+        <script src="js/main.js"></script>   
+    </body>
+</html>
