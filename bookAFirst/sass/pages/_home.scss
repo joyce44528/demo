@@ -1,0 +1,171 @@
+.section-about{
+    background-image:  linear-gradient( 
+        to right,
+        rgba($color-bg-pink, .5), rgba($color-bg-purple, .5)),url('../img/dots.svg');
+    background-attachment: fixed;  
+    padding: 40rem 20rem 20rem 20rem ;
+    margin-top: -25vh;
+
+    @include respond(tab-land) {
+        padding: 40rem 10rem 20rem 10rem;
+    }
+    
+    @include respond(tab-port) {
+        margin-top: -17%;
+        // padding: 20rem 0;
+
+    }
+
+    @include respond(phone) {
+        margin-top: -10vh;
+        // 因為header的斜度有調整，所以可以上去的少一點
+
+        padding: 40rem 2rem 20rem 2rem ;
+    }
+}
+
+.book-wrap {
+
+    padding: 30rem 0;
+    background-image:  linear-gradient( 
+        to right,
+        rgba($color-bg-pink, .5), rgba($color-bg-purple, .5)),url('../img/bg-lt.png');
+        
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include respond(phone) {
+        padding: 20rem 0 15rem 0;
+    }
+
+    .heading-secondary--dn {
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+        } 
+        
+        
+    }
+    
+    
+
+}
+
+.bg-color {
+    
+    background-image:  linear-gradient( 
+        to bottom,
+        rgba(#ece4e2, .6), rgba(#ece4e2, .7)),url('../img/bg-lt.png');
+
+   
+        
+    // jquery背景色無法漸變
+    
+}
+
+.bg-color-2 {
+    background-image:  linear-gradient( 
+        to bottom,
+        rgba(#D3C9BD, .3), rgba(#D3C9BD, .7)),url('../img/bg-lt.png');
+
+    
+}
+.bg-color-3 {
+    background-image:  linear-gradient( 
+        to bottom,
+        rgba(#fff, .3), rgba(#fff, .7)),url('../img/bg-lt.png');
+}
+
+
+
+.section__detail {
+   background: linear-gradient(to right, rgba(246, 249, 251, .6) 65%, #367C64 35%), url('../img/dots.svg') center center ;
+   
+    padding: 20rem 10rem;
+
+    @include respond(tab-land) {
+        padding: 10rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 5rem;
+    }
+
+    @include respond(phone-tab) {
+        background-image: linear-gradient(to top,rgba(246, 249, 251, .5) 70%, #367C64  30%), url('../img/dots.svg');
+    }
+
+    @include respond(phone) {
+        padding: 20rem 3rem;
+    }
+}
+
+
+.section-stories {
+    // position: relative;
+    background-image: linear-gradient(120deg, #EBEAEC 35%, transparent 65%), url(../img/dots.svg);
+    padding: 15rem 0;
+   
+    
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+        
+    }
+
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-color: #eee;
+
+}
+
+.book {
+    background: linear-gradient(to right,rgba($color-text-white, .9) 57%,transparent 43%),url(../img/form-bg-big.jpg) 84% 40% / cover ;
+    // 用漸層做出clip-path的效果
+   
+    border-radius:  3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: .2);
+
+    @include respond(tab-land) {
+        background: linear-gradient(to right,rgba($color-text-white, .9) 53%,transparent 45%),url(../img/form-bg-big.jpg) 88% 40% / cover ;
+
+    }
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right,rgba($color-text-white, .9) 100%,transparent 0%),url(../img/form-bg-small.jpg);
+    }
+
+
+    
+
+
+
+
+    &__form {
+        width: 50%;
+        padding: 6rem 6rem 6rem 10rem;
+       
+        @include respond(tab-land) {
+            padding: 4rem 4rem 4rem 8rem;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 4rem;
+        }
+    
+
+    }
+
+}
+
+// .book-img {
+//     @include posa-center;
+   
+// }
+
+   
+

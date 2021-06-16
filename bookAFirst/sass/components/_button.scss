@@ -1,0 +1,187 @@
+/* 設定header的button */
+.btn{
+    &,
+    &:link,.btn:visited{
+         text-transform: uppercase;
+         text-decoration: none;
+         padding: 1.5rem 4rem;
+         font-size: $p-font-size;
+         font-weight: 600;
+         display: inline-block;
+         border-radius: 10rem;
+         transition: all .2s;
+         position: relative;
+         animation: moveInBottom 1s ease-out .75s backwards ;
+         /* 可以將動畫設定在這裡，也可以設定在另一個class中.btn-animate */
+      
+        //  設定button標籤的btn樣式
+        border: none;
+        cursor: pointer;
+     }
+     
+    &:hover{
+         transform: translateY(-.3rem);
+         box-shadow: 0 10px 20px rgba($color-black, .2);
+ 
+         /* 用btn:hover控制.btn::after */
+         &::after{
+             transform: scaleX(1.4) scaleY(1.6);
+             opacity: 0;
+         }
+     }
+    &:focus,&:active{
+        outline: hidden;
+         transform: translateY(-.1rem);
+         box-shadow: 0 5px 10px rgba($color-black, .2)
+     }
+     
+    &--white{
+         background-color: $color-text-white;
+         color: $color-text-gray;
+         
+         &::after{
+             background-color: $color-text-white;
+             /* 因為這是white按鈕，所以根據此特定屬性將顏色的部分設在btn-white上 */
+         }
+         
+     }
+
+     &--green{
+        background-color: $color-primary;
+        color: $color-text-white;
+        
+        &::after{
+            background-color: $color-primary;
+            /* 因為這是white按鈕，所以根據此特定屬性將顏色的部分設在btn-white上 */
+        }
+        
+    }
+     
+     /* btn的after */
+     
+    &::after{
+         content: '';
+         display: inline-block;
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         border-radius: 10rem;
+         top: 0;
+         left: 0;
+         z-index: -1;
+     /* 將偽類生成的按鈕藏在背後，之後再用.btn::hover觸發他出現 */
+         transition: all .4s;
+         
+     }
+     
+   
+    &--animate{
+         animation: moveInBottom 1s ease-out .75s backwards;
+     }
+ }
+
+//  設定section的btn-text
+.btn-text {
+    &:link,
+    &:visited {
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: .2rem;
+        margin-bottom: 3px;
+        padding: 3px;
+        border-bottom: 1px solid $color-primary;
+        // 這些非常小的長度可以用固定長度沒關係，如果用rem會造成若更改root 的字級，會使這些小地方會有很大變化
+        font-size: $default-font-size;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-text-white;
+        transform: translateY(-2px);
+        @include box-shadow-3d;
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        background-color: $color-primary-light;
+        transform: translateY(0);
+    }
+}
+
+
+// 登入註冊表單按鈕設定
+.toggle-btn {
+    position: relative;
+    width: 60%;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 1rem 0;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all .5s;
+    
+    &-cue-color {
+        position: absolute;
+        background-color: $color-primary-dark;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: transform .5s;
+        
+        
+    }
+
+    &.login {
+        margin-right: 3rem;
+
+        &,
+        &:link,
+        &:visited {
+            color: $color-text-white;
+        }
+
+        // &:after {
+        //     content: '';
+        //     height: 90%;
+        //     width: 2px;
+        //     background-color: $color-primary-dark;
+        //     position: absolute;
+        //     top: 10%;
+        //     left: 140%;
+            
+        // }
+
+    }
+
+    &.register {
+
+        &,
+        &:link,
+        &:visited {
+            color: $color-primary-dark;
+        }
+
+    }
+
+    
+
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: none;
+    // 因為button本身有預設所以需要在這裡設定一次
+    font-family: 'Shippori Mincho', "Lato", 'sans-serif';
+
+
+    &-color-blue {
+        color: $color-primary-dark;
+    }
+}

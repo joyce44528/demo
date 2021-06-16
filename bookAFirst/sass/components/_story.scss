@@ -1,0 +1,120 @@
+.story {
+    width: 65%;
+    max-width: 900px;
+    margin: 0 auto;
+    
+    // 將不同story隔開
+    // box-shadow: 0 3rem 6rem rgba($color-black, .2);
+    background-color: rgba($color-text-white, $alpha: .6);
+    border-radius: 10px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-10deg) translateY(0);
+    @include box-shadow-3d;
+
+
+    &:not(:last-child) {
+        margin-bottom: 15rem;
+    }
+
+    & > * {
+        transform: skewX(10deg);
+    }
+
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+
+        & > * {
+            transform: skewX(0);
+        }
+
+    }
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        // 將照片做成正方形的，之後才方便border-radius做成圓形
+        // background-color: orange;
+        float: left;
+        border-radius: 50%;  //若瀏覽器不支援clip-path，以她代替
+
+        // 將圖片剪成圓形
+        // clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(10deg);
+        position: relative;
+        overflow: hidden;
+        // 將超過他的圖片部分隱藏，才不會出現bug
+        z-index: 3;
+
+        //當clip-path若被支援
+    @supports (clip-path: polygon(0 0)) or  (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        width: 15rem;
+        height: 15rem;
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        // clrcle(半徑長度 at 圓心x軸 圓心y軸)
+        border-radius: none; 
+    }
+        
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
+    }
+
+    
+    &__img {
+        height: 100%;
+        transform: translateX(-2rem) scale(1.1);
+        transition: all .5s ;
+        backface-visibility: hidden;
+
+        &--left {
+            transform: translateX(-3rem) scale(1.1);
+        }
+    }
+
+    &__text {
+        
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        color: #000;
+        text-align: center;
+        font-size: 2rem;
+        opacity: 0;
+        transition: all .5s ease-out;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+
+    }
+
+    &:hover &__img {
+        transform: translateX(-2rem) scale(1);
+        filter: blur(3px) opacity(.5);
+    }
+
+    &:hover &__img--left {
+        transform: translateX(-3rem) scale(1);
+        filter: blur(3px) opacity(.5);
+    }
+
+}
